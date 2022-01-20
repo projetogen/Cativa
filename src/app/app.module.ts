@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MenuComponent } from './menu/menu.component';
 
 import { Section1LandingpageComponent } from './section1-landingpage/section1-landingpage.component';
 
@@ -13,9 +14,12 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
 
+    MenuComponent
+
     Section1LandingpageComponent
 
     FooterComponent
+
   ],
   imports: [
     BrowserModule,
