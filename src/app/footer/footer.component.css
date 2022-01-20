@@ -1,0 +1,46 @@
+.container-fluid {
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+  font-family: dm-sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20, 83px;
+  color: #748748;
+}
+
+h4 {
+  font: Poppins;
+}
+#list-contact {
+  color: #748748;
+  font-family: dm-sans;
+  font-size: 16px;
+}
+li {
+  list-style-type: none;
+}
+
+.bxl-github,
+.bxl-instagram-alt,
+.bxl-twitter {
+  display: flex;
+  align-items: center;
+  filter: grayscale(1);
+  opacity: 0.4;
+  list-style: none;
+  font-size: 30px;
+}
+#tr-icon:hover {
+  opacity: 1;
+  filter: grayscale(0);
+  transition: all ease 0.7s;
+}
+#box-icon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
