@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+* {
+  margin: 0px;
+}
+.dmsans {
+  font-family: "DM Sans", sans-serif;
+}
+.cor-da-fonte {
+  color: #748748;
+}
