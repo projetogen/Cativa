@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+.principal{
+    background-color: #F4EDED;
+}
+
+#maingreenbutton{
+    background-color: #748748;
+    color: #F9F9F9;
+    width: 110px;
+    height: 40px;
+    align-self: start;
+}
+
+.poppins{
+    font-family: 'Poppins', sans-serif;
+    color: #183A37;
+}
+
+.dmsans{
+    font-family: 'DM Sans', sans-serif;
+    color: gray;
+} 
+
+.title{
+    font-size: 50px;
+}
+
+.desc{
+    font-size: 18px;
+}
+
+.paddingrow{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.mainbox{
+    padding-top: 120px;
+    padding-bottom: 50px;
+    max-width: 320px
+}
