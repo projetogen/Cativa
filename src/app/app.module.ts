@@ -14,9 +14,9 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
 
-    MenuComponent
+    MenuComponent,
 
-    Section1LandingpageComponent
+    Section1LandingpageComponent,
 
     FooterComponent
 
