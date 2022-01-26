@@ -15,10 +15,6 @@ import { FooterComponent } from './footer/footer.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { LoginComponent } from './login/login.component';
 
-import { CadastrarComponent } from './cadastrar/cadastrar.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -36,7 +32,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
       PostagemComponent,
       LoginComponent,
 
-      CadastrarComponent
+      
 
 
 
