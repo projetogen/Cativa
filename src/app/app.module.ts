@@ -34,7 +34,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
     FooterComponent,
 
       PostagemComponent,
-      LoginComponent
+      LoginComponent,
 
       CadastrarComponent
 
