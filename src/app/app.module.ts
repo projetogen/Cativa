@@ -17,10 +17,12 @@ import { FooterComponent } from './footer/footer.component';
 import { PostagemComponent } from './postagem/postagem.component';
 import { LoginComponent } from './login/login.component';
 
+
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobreComponent } from './sobre/sobre.component';
 
 import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -38,8 +40,17 @@ import { FormsModule } from '@angular/forms';
 
     FooterComponent,
 
+
     PostagemComponent,
     LoginComponent,
+
+      PostagemComponent,
+      LoginComponent,
+
+      
+
+
+
 
     CadastrarComponent,
     SobreComponent
