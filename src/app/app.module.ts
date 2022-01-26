@@ -30,7 +30,7 @@ import { LoginComponent } from './login/login.component';
     FooterComponent,
 
       PostagemComponent,
-      LoginComponent
+      LoginComponent,
 
       
 
