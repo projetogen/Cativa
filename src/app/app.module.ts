@@ -24,7 +24,7 @@ import { LoginComponent } from './login/login.component';
     MenuComponent,
 
     Section1LandingpageComponent,
-    
+
     TemaComponent,
 
     FooterComponent,
