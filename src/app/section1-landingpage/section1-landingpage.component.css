@@ -2,20 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 .principal{
-    background-color: #F4EDED;
+    background-color: #FAE5E5;
 }
 
-#maingreenbutton{
-    background-color: #748748;
+#mainpurplebutton{
+    background-color: #8A71B8;
     color: #F9F9F9;
-    width: 110px;
-    height: 40px;
+    width: 184px;
+    height: 70px;
     align-self: start;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 40px;
+}
+
+.fs-24{
+    font-size: 24px;
 }
 
 .poppins{
     font-family: 'Poppins', sans-serif;
-    color: #183A37;
+    color: #5B822B;
 }
 
 .dmsans{
@@ -24,11 +31,16 @@
 } 
 
 .title{
-    font-size: 50px;
+    font-size: 80px;
+    margin-bottom: 40px;
 }
 
 .desc{
-    font-size: 18px;
+    font-size: 24px;
+}
+
+.mainimg{
+    max-height: 800px;
 }
 
 .paddingrow{
@@ -37,7 +49,6 @@
 }
 
 .mainbox{
-    padding-top: 120px;
+    padding-top: 110px;
     padding-bottom: 50px;
-    max-width: 320px
 }
