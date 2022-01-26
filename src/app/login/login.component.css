@@ -29,21 +29,11 @@ header {
   padding: 0px 20px;
 }
 
-/* nav {
-  display: flex;
-  text-align: center;
-}
 
-nav a {
-  margin: auto 20px auto 40px;
-  text-decoration: none;
-  color: #d44f32;
-}
-nav li {
-  list-style: none;
-}
- */
 #img-bg {
+
+
+
   min-height: 695px;
   background-position: center;
   background-repeat: no-repeat;
