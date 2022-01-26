@@ -11,7 +11,12 @@ import { Section1LandingpageComponent } from './section1-landingpage/section1-la
 import { TemaComponent } from './tema/tema.component';
 
 import { FooterComponent } from './footer/footer.component';
+
+import { PostagemComponent } from './postagem/postagem.component';
+import { LoginComponent } from './login/login.component';
+
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
+
 
 
 
@@ -27,7 +32,12 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
     TemaComponent,
 
     FooterComponent,
+
+      PostagemComponent,
+      LoginComponent
+
       CadastrarComponent
+
 
 
   ],
