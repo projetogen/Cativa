@@ -28,13 +28,13 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
     MenuComponent,
 
     Section1LandingpageComponent,
-    
+
     TemaComponent,
 
     FooterComponent,
 
       PostagemComponent,
-      LoginComponent
+      LoginComponent,
 
       CadastrarComponent
 
