@@ -1,7 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins";
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+li,
+a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #d44f32;
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+}
+.nav-links {
+  list-style: none;
+}
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+
 #img-bg {
+
   /*background-image: url(../../assets/image/login.png);*/
+
+
+
+
   min-height: 695px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#usuario,
+#senha {
+  border-radius: 10rem;
+  height: 3.2rem;
+  padding: 20px;
+}
+
+#text-home {
+  color: #8a71b8;
+  font-weight: 800;
+  font-size: 30px;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+
+.btn-btn-login {
+  text-align: center;
+  background: #8a71b8;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  padding: 13px;
+  border-radius: 10rem;
+  width: 20rem;
+  height: 3rem;
+}
+
+span {
+  text-decoration: none;
+}
+
+#login-tag {
+  text-decoration: none;
+  color: #5b822b;
 }
