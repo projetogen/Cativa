@@ -28,43 +28,58 @@ header {
   display: inline-block;
   padding: 0px 20px;
 }
-
-
-#img-bg {
-
-
-
-  min-height: 695px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#text-p {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
 }
-
 #usuario,
 #senha {
   border-radius: 10rem;
   height: 3.2rem;
   padding: 20px;
+  border: 1px solid blueviolet;
 }
 
 #text-home {
+  display: flex;
+  align-items: flex-start;
   color: #8a71b8;
-  font-weight: 800;
-  font-size: 30px;
+  font-weight: 600;
+  font-size: 25px;
   font-style: normal;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.9px;
+}
+
+.text-center2 {
+  display: flex;
+  text-align: start;
 }
 
 .btn-btn-login {
-  text-align: center;
-  background: #8a71b8;
+  display: flex;
+  justify-content: center;
+  position: relative;
   color: #fff;
-  display: inline-block;
-  text-decoration: none;
-  padding: 13px;
+
+  border: 1px solid blueviolet;
+  background-color: #8a71b8;
+  padding: 12px 35px;
+  margin: 0 15px;
+  font-weight: 400;
+  line-height: 30px;
   border-radius: 10rem;
   width: 20rem;
-  height: 3rem;
+  height: 3.1rem;
+  font-size: 21px;
+
+  cursor: pointer;
+  overflow: hidden;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.form-control {
+  font-weight: 500;
 }
 
 span {
@@ -72,6 +87,11 @@ span {
 }
 
 #login-tag {
+  display: flex;
+  justify-content: center;
   text-decoration: none;
   color: #5b822b;
+}
+.form-group {
+  font-weight: 600;
 }
