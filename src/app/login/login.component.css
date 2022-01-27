@@ -28,11 +28,13 @@ header {
   display: inline-block;
   padding: 0px 20px;
 }
+
 #text-p {
   display: flex;
   text-align: center;
   justify-content: space-evenly;
 }
+
 #usuario,
 #senha {
   border-radius: 10rem;
