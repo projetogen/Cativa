@@ -8,25 +8,32 @@
   </nav>
 </header>
 
-<!--Fim Inicio Nav-->
+<!--Fim  Nav-->
 
 <div class="container-fluid">
   <div class="row d-flex align-items-center">
     <div class="col-md-6">
       <div class="row d-flex justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-6 mt-5 p-5">
           <h1 id="text-home" class="text-center mb-3">Bem Vindo de Volta!</h1>
 
           <!--paragrafo-->
-          <p class="text-center">
+          <p class="text-center2 mb-4">
             Não tem uma conta ?
-            <span><a routerLink='/cadastrar' id="login-tag">Cadastrar</a></span>
+            <span
+              ><a id="text-p" routerLink="/cadastrar" id="login-tag">
+                Cadastrar</a
+              ></span
+            >
           </p>
           <!--Usuario-->
           <div class="form-group">
             <label for="usuario">Username</label>
             <input
-              class="form-control"
+
+              [(ngModel)]="userLogin.usuario"
+
+              class="form-control mt-2"
               type="text"
               name="usuario"
               id="usuario"
@@ -34,12 +41,15 @@
             />
           </div>
 
-          <!--Senha-->
+          <!-- Senha-->
 
           <div class="form-group">
             <label for="usuario">Senha</label>
             <input
-              class="form-control"
+
+              [(ngModel)]="userLogin.senha"
+
+              class="form-control mt-2"
               type="password"
               name="senha"
               id="senha"
@@ -56,16 +66,21 @@
           <!--Fim LINK DIMISS PASSWORD-->
 
           <!--Button-->
-          <div class="d-flex justify-content-center">
-            <a class="btn-btn-login" href="#">Login</a>
+          <div class="d-flex justify-content-center mt-4">
+
+            <a class="btn-btn-login login mt-4" href="#" (click)="entrar()"
+              >Login</a
+            >
+
+            <a class="btn-btn-login login mt-4" href="#">Login</a>
           </div>
           <!--Fim Button-->
 
-          <hr class="mt-5 mb-5" />
+          <hr class="mt-4" />
         </div>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 mt-5">
       <img src="../../assets/img/login.svg" alt="" />
     </div>
   </div>
