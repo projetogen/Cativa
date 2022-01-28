@@ -30,6 +30,7 @@
           <div class="form-group">
             <label for="usuario">Username</label>
             <input
+              [(ngModel)]="userLogin.usuario"
               class="form-control mt-2"
               type="text"
               name="usuario"
@@ -38,11 +39,12 @@
             />
           </div>
 
-          <!--Senha-->
+          <!-- Senha-->
 
           <div class="form-group">
             <label for="usuario">Senha</label>
             <input
+              [(ngModel)]="userLogin.senha"
               class="form-control mt-2"
               type="password"
               name="senha"
@@ -61,7 +63,9 @@
 
           <!--Button-->
           <div class="d-flex justify-content-center mt-4">
-            <a class="btn-btn-login login mt-4" href="#">Login</a>
+            <a class="btn-btn-login login mt-4" href="#" (click)="entrar()"
+              >Login</a
+            >
           </div>
           <!--Fim Button-->
 
