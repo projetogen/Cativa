@@ -22,6 +22,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { SobreComponent } from './sobre/sobre.component';
 
 import { FormsModule } from '@angular/forms';
+import { InicioComponent } from './inicio/inicio.component';
 
 
 
@@ -53,7 +54,8 @@ import { FormsModule } from '@angular/forms';
 
 
     CadastrarComponent,
-    SobreComponent
+    SobreComponent,
+    InicioComponent
   
   ],
   imports: [
