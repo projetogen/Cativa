@@ -8,8 +8,6 @@ import { AppComponent } from './app.component';
 
 import { MenuComponent } from './menu/menu.component';
 
-import { Section1LandingpageComponent } from './section1-landingpage/section1-landingpage.component';
-
 import { TemaComponent } from './tema/tema.component';
 
 import { FooterComponent } from './footer/footer.component';
@@ -23,6 +21,7 @@ import { SobreComponent } from './sobre/sobre.component';
 
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 
@@ -34,8 +33,6 @@ import { InicioComponent } from './inicio/inicio.component';
 
 
     MenuComponent,
-
-    Section1LandingpageComponent,
 
     TemaComponent,
 
@@ -55,7 +52,8 @@ import { InicioComponent } from './inicio/inicio.component';
 
     CadastrarComponent,
     SobreComponent,
-    InicioComponent
+    InicioComponent,
+    LandingPageComponent
   
   ],
   imports: [
