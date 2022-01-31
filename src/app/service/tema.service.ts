@@ -24,7 +24,7 @@ export class TemaService {
   }
 
   postTema(tema: TemaModel): Observable<TemaModel> {
-    return this.http.post<TemaModel>('https://cativa-back.herokuapp.com/tema', tema, this.token)
+    return this.http.post<TemaModel>('https://cativa-back.herokuapp.com/tema/save', tema, this.token)
   }
   putTema(tema: TemaModel): Observable<TemaModel> {
     return this.http.put<TemaModel>('https://cativa-back.herokuapp.com/tema', tema, this.token)
