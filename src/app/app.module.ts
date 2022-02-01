@@ -26,12 +26,9 @@ import { TimeComponent } from './time/time.component';
 
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
+
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
-
-
-
-
 
 
 @NgModule({
@@ -53,11 +50,6 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
       LoginComponent,
       TimeComponent,
 
-      
-
-
-
-
     CadastrarComponent,
     SobreComponent,
     InicioComponent,
@@ -65,7 +57,7 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     MenuLogadoComponent,
     TemaEditComponent,
     TemaDeleteComponent
-  
+ 
   ],
   imports: [
     BrowserModule,
