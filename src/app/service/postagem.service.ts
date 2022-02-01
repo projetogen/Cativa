@@ -16,27 +16,27 @@ export class PostagemService {
   }
 
   getAllPostagens(): Observable<PostagemModel[]> {
-    return this.http.get<PostagemModel[]>('https://cativa-back.herokuapp.com/postagem', this.token)
+    return this.http.get<PostagemModel[]>('http://localhost:8080/postagem', this.token)
   }
 
   getByIdPostagem(id: number): Observable<PostagemModel> {
-    return this.http.get<PostagemModel>(`https://cativa-back.herokuapp.com/postagem/${id}`, this.token)
+    return this.http.get<PostagemModel>(`http://localhost:8080/postagem/${id}`, this.token)
   }
 
   getByTitulo(titulo: string): Observable<PostagemModel[]> {
-    return this.http.get<PostagemModel[]>(`https://cativa-back.herokuapp.com/postagem/titulo/${titulo}`, this.token)
+    return this.http.get<PostagemModel[]>(`http://localhost:8080/postagem/titulo/${titulo}`, this.token)
   }
 
   postPostagem(postagem: PostagemModel): Observable<PostagemModel> {
-    return this.http.post<PostagemModel>('https://cativa-back.herokuapp.com/postagens/save', postagem, this.token)
+    return this.http.post<PostagemModel>('http://localhost:8080/postagens/save', postagem, this.token)
   }
 
   putPostagem(postagem: PostagemModel): Observable<PostagemModel> {
-    return this.http.put<PostagemModel>('https://cativa-back.herokuapp.com/update', postagem, this.token)
+    return this.http.put<PostagemModel>('http://localhost:8080/update', postagem, this.token)
   }
 
   deletePostagem(id: number) {
-    return this.http.delete(`https://cativa-back.herokuapp.com/remove/${id}`, this.token)
+    return this.http.delete(`http://localhost:8080/remove/${id}`, this.token)
   }
 
 }
