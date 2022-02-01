@@ -7,7 +7,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { TemaComponent } from './tema/tema.component';
-
+import { TimeComponent } from './time/time.component'
 
 const routes: Routes = [
 
@@ -24,7 +24,11 @@ const routes: Routes = [
 
   {path: 'sobre', component: SobreComponent},
 
+ 
+  {path: 'time', component: TimeComponent}
+
   {path: 'landingPage', component: LandingPageComponent}
+ 
 ];
 
 @NgModule({
