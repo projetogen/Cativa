@@ -28,6 +28,7 @@ export class PostagemService {
   }
 
   postPostagem(postagem: PostagemModel): Observable<PostagemModel> {
+
     return this.http.post<PostagemModel>('http://localhost:8080/postagem/save', postagem, this.token)
   }
 
