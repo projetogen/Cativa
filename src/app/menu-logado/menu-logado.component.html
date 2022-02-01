@@ -11,11 +11,11 @@
     </div>
   </div>
 
-<!--botão quebra de tela-->
+  <!--botão quebra de tela-->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-<!--/botão quebra de tela-->
+  <!--/botão quebra de tela-->
 
   <div class="container justify-content-center ">
     <div class="row ">
@@ -26,38 +26,27 @@
           <ul class="navbar-nav d-flex align-items-center ">
 
             <li class="nav-item active">
-              <a class="nav-link px-4" href="#">
+              <a class="nav-link px-4" routerLink="/inicio">
                 <p class="cor-da-fonte dmsans">Início</p>
               </a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link px-4" href="#sobre">
-                <p class="cor-da-fonte dmsans">Sobre</p>
+            <li class="nav-item ">
+              <a class="nav-link px-4 " routerLink='/tema'>
+                <p class="cor-da-fonte dmsans">Temas</p>
               </a>
             </li>
 
             <li class="nav-item ">
-              <a class="nav-link px-4 " href="#sobre">
-                <p class="cor-da-fonte dmsans">Depoimentos</p>
-              </a>
-            </li>
-
-            <li class="nav-item ">
-              <a class="nav-link px-4 " href="#sobre">
+              <a class="nav-link px-4 " href="#">
                 <p class="cor-da-fonte dmsans">Contato</p>
               </a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link px-4" routerLink = "/entrar">
-                <img src="../../assets/icons/entrar.svg" width="120" height="" alt="">
-              </a>
-            </li>
 
             <li class="nav-item">
-              <a class="nav-link px-4" routerLink = "/cadastrar">
-                <p class="cor-da-fonte dmsans">Cadastrar</p>
+              <a class="nav-link px-4" (click)='sair()' routerLink="/landingPage">
+                <img src="../../assets/icons/sair.svg" width="120" height="" alt="">
               </a>
             </li>
 

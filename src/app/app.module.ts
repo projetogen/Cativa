@@ -21,7 +21,14 @@ import { SobreComponent } from './sobre/sobre.component';
 
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
+
+import { TimeComponent } from './time/time.component';
+
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+
 
 
 
@@ -44,6 +51,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
       PostagemComponent,
       LoginComponent,
+      TimeComponent,
 
       
 
@@ -53,7 +61,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     CadastrarComponent,
     SobreComponent,
     InicioComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    MenuLogadoComponent,
+    TemaEditComponent,
+    TemaDeleteComponent
   
   ],
   imports: [
