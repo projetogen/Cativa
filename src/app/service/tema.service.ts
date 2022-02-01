@@ -26,8 +26,9 @@ export class TemaService {
   postTema(tema: TemaModel): Observable<TemaModel> {
     return this.http.post<TemaModel>('http://localhost:8080/tema/save', tema, this.token)
   }
+  
   putTema(tema: TemaModel): Observable<TemaModel> {
-    return this.http.put<TemaModel>('http://localhost:8080/tema', tema, this.token)
+    return this.http.put<TemaModel>('http://localhost:8080/tema/update', tema, this.token)
   }
 
   deleteTema(id: number) {

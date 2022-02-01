@@ -27,9 +27,8 @@ import { TimeComponent } from './time/time.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
 
-
-
-
+import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
+import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
 
 
 @NgModule({
@@ -51,17 +50,14 @@ import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
       LoginComponent,
       TimeComponent,
 
-      
-
-
-
-
     CadastrarComponent,
     SobreComponent,
     InicioComponent,
     LandingPageComponent,
-    MenuLogadoComponent
-  
+    MenuLogadoComponent,
+    TemaEditComponent,
+    TemaDeleteComponent
+ 
   ],
   imports: [
     BrowserModule,
