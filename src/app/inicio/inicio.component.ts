@@ -14,7 +14,6 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
-
   postagem: PostagemModel = new PostagemModel();
   listaPostagens: PostagemModel[];
 
@@ -40,6 +39,8 @@ export class InicioComponent implements OnInit {
     }
 
     this.findAllTemas();
+    this.getAllPostagens();
+
   }
 
   findAllTemas() {
@@ -54,17 +55,31 @@ export class InicioComponent implements OnInit {
     });
   }
 
+  getAllPostagens() {
+    this.postagemService.getAllPostagens().subscribe((resp: PostagemModel[]) => {
+        this.listaPostagens = resp;
+      });
+  }
+
+  findByIdUser(){
+    this.authService.getByIdUser(this.idUser).subscribe((resp: UsuarioModel) => {
+      this.user = resp
+    })
+  }
+
   publicar() {
     this.tema.id = this.idTema;
     this.postagem.tema = this.tema;
 
     this.user.id = this.idUser;
-    this.postagem.usuario = this.user; 
+    this.postagem.usuario = this.user;
 
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: PostagemModel) => {
+    this.postagemService
+      .postPostagem(this.postagem).subscribe((resp: PostagemModel) => {
         this.postagem = resp;
         alert('Postagem realizada com sucesso!');
         this.postagem = new PostagemModel();
+        this.getAllPostagens()
       });
   }
 }
