@@ -1,4 +1,16 @@
 <h1 class="fs-54 text-center">Matérias</h1>
+<<<<<<< HEAD
+<div class="container">
+  <div class="container-fluid card-deck justify-content-center ">
+    <!-- Cards das materias -->
+    <div class="row p-3">
+
+      <div class="card">
+        <img src="../../assets/img/tema-portugues.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Português</h5>
+        </div>
+=======
 <div class="container-medium card-deck justify-content-center">
   <!-- Cards das materias --> 
   <div class="row p-3">
@@ -7,62 +19,62 @@
       <img src="../../assets/img/tema-portugues.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Português</h5>
+>>>>>>> ff395afa97a19d6a144a4024a8e276b5fd7e431d
       </div>
-    </div>
 
-    <div class="card">
-      <img src="../../assets/img/tema-matematica.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Matemática</h5>
+      <div class="card">
+        <img src="../../assets/img/tema-matematica.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Matemática</h5>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="../../assets/img/tema-ciencia.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Ciências</h5>
+      <div class="card">
+        <img src="../../assets/img/tema-ciencia.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Ciências</h5>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="../../assets/img/tema-biologia.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Biologia</h5>
+      <div class="card">
+        <img src="../../assets/img/tema-biologia.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Biologia</h5>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="row p-3">
-    <div class="card">
-      <img src="../../assets/img/tema-programacao.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Programação</h5>
+    <div class="row p-3">
+      <div class="card">
+        <img src="../../assets/img/tema-programacao.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Programação</h5>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="../../assets/img/tema-financa.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Finanças</h5>
+      <div class="card">
+        <img src="../../assets/img/tema-financa.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Finanças</h5>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="../../assets/img/tema-games.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Games</h5>
+      <div class="card">
+        <img src="../../assets/img/tema-games.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Games</h5>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="../../assets/img/tema-curiosidade.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Curiosidades</h5>
+      <div class="card">
+        <img src="../../assets/img/tema-curiosidade.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Curiosidades</h5>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Campo para cadastrar nova matéria -->
-  <div class="container">
-    
+    <!-- Campo para cadastrar nova matéria -->
+    <div class="container">
+
       <h5 class="fs-18 text-center">Veja aqui todos os temas cadastrados ou cadastre um novo:</h5>
 
       <div class="row d-flex justify-content-center mt-4 mb-5">
@@ -76,17 +88,44 @@
           </div>
         </div>
       </div>
-    
-  </div>
 
-  <div class="container">
-
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="text-center">Todas as matérias cadastradas</h2>
-      </div>
     </div>
 
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center">Todas as matérias cadastradas</h2>
+        </div>
+      </div>
+
+<<<<<<< HEAD
+      <!-- Tabela de matérias cadastradas -->
+      <div class="row mt-3 mb-5 d-flex justify-content-center">
+
+        <div class="col-md-6">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Matérias</th>
+                <th scope="col" class="text-right">Modificações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor='let item of listaMaterias'>
+                <th>{{item.id}}</th>
+                <td>{{item.assunto}}</td>
+                <td class="d-flex justify-content-end">
+                  <button class="btn btn-info mr-3">Editar</button>
+                  <button class="btn btn-danger">Apagar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+=======
     <!-- Tabela de matérias cadastradas -->
     <div class="row mt-3 mb-5 d-flex justify-content-center">
 
@@ -110,10 +149,11 @@
             </tr>
           </tbody>
         </table>
+>>>>>>> ff395afa97a19d6a144a4024a8e276b5fd7e431d
       </div>
 
     </div>
 
   </div>
-  
+
 </div>
