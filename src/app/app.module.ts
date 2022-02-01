@@ -25,6 +25,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { TimeComponent } from './time/time.component';
 
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
 
 
 
@@ -58,7 +59,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     CadastrarComponent,
     SobreComponent,
     InicioComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    MenuLogadoComponent
   
   ],
   imports: [
