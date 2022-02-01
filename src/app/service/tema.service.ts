@@ -16,22 +16,22 @@ export class TemaService {
   }
 
   getAllTema(): Observable<TemaModel[]> {
-    return this.http.get<TemaModel[]>('https://cativa-back.herokuapp.com/tema', this.token)
+    return this.http.get<TemaModel[]>('http://localhost:8080/tema', this.token)
   }
 
   getByIdTema(id: number): Observable<TemaModel> {
-    return this.http.get<TemaModel>(`https://cativa-back.herokuapp.com/tema/${id}`, this.token)
+    return this.http.get<TemaModel>(`http://localhost:8080/tema/${id}`, this.token)
   }
 
   postTema(tema: TemaModel): Observable<TemaModel> {
-    return this.http.post<TemaModel>('https://cativa-back.herokuapp.com/tema/save', tema, this.token)
+    return this.http.post<TemaModel>('http://localhost:8080/tema/save', tema, this.token)
   }
   putTema(tema: TemaModel): Observable<TemaModel> {
-    return this.http.put<TemaModel>('https://cativa-back.herokuapp.com/tema', tema, this.token)
+    return this.http.put<TemaModel>('http://localhost:8080/tema', tema, this.token)
   }
 
   deleteTema(id: number) {
-    return this.http.delete(`https://cativa-back.herokuapp.com/tema/${id}`, this.token)
+    return this.http.delete(`http://localhost:8080/tema/${id}`, this.token)
   }
 
 }
