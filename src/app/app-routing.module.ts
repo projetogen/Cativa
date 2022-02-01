@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'sobre', component: SobreComponent},
 
  
-  {path: 'time', component: TimeComponent}
+  {path: 'time', component: TimeComponent},
 
   {path: 'landingPage', component: LandingPageComponent}
  
