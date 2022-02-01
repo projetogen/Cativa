@@ -23,6 +23,7 @@ import { SobreComponent } from './sobre/sobre.component';
 
 import { FormsModule } from '@angular/forms';
 import { InicioComponent } from './inicio/inicio.component';
+import { TimeComponent } from './time/time.component';
 
 
 
@@ -47,6 +48,7 @@ import { InicioComponent } from './inicio/inicio.component';
 
       PostagemComponent,
       LoginComponent,
+      TimeComponent,
 
       
 

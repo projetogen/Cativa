@@ -6,7 +6,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { TemaComponent } from './tema/tema.component';
-
+import { TimeComponent } from './time/time.component'
 
 const routes: Routes = [
 
@@ -21,7 +21,9 @@ const routes: Routes = [
 
   {path: 'tema', component: TemaComponent},
 
-  {path: 'sobre', component: SobreComponent}
+  {path: 'sobre', component: SobreComponent},
+
+  {path: 'time', component: TimeComponent}
 ];
 
 @NgModule({
