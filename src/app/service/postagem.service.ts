@@ -33,11 +33,11 @@ export class PostagemService {
   }
 
   putPostagem(postagem: PostagemModel): Observable<PostagemModel> {
-    return this.http.put<PostagemModel>('http://localhost:8080/update', postagem, this.token)
+    return this.http.put<PostagemModel>('http://localhost:8080/postagem/update', postagem, this.token)
   }
 
   deletePostagem(id: number) {
-    return this.http.delete(`http://localhost:8080/remove/${id}`, this.token)
+    return this.http.delete(`http://localhost:8080/postagem/remove/${id}`, this.token)
   }
 
 }
