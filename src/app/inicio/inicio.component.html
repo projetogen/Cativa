@@ -1,4 +1,4 @@
-<!--card postagem--
+<!--card postagem-->
 <div class="container p-0">
   <div class="col-6">
 
@@ -6,7 +6,7 @@
       <div class="card text-center" *ngFor='let item of listaPostagens'>
         <div class="card-body">
           <h5 class="card-title m-0">{{item.titulo}}</h5>
-          <small class="text-muted"> Tema: {{item.tema.descricao}}</small>
+          <small class="text-muted"> Tema: {{item.tema.assunto}}</small>
           <p class="card-text mt-3">{{item.texto}}</p>
           <p class="card-text"><small class="text-muted">
               {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
@@ -15,35 +15,14 @@
           <p class="card-text"><small class="text-muted">
               by: {{item.usuario.nome}}
             </small></p>
+
+            <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3">Editar</a>
+            <a [routerLink]="['/postagem-delete', item.id]" class="text-danger">Apagar</a>
+
         </div>
       </div>
     </div>
-    <!--/card postagem-->
-
-
-<!--card texte-->
-<div class="container p-0">
-  <div class="col-6">
-
-    <div class="card-columns">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title m-0">Aprendendo</h5>
-          <small class="text-muted">geral</small>
-          <p class="card-text mt-3">aprender é legal de mais, pena que da raiava</p>
-          <p class="card-text"><small class="text-muted">
-              01/02/2022 às 15:00
-            </small></p>
-
-          <div class="row justify-content-center align-items-center">
-            <img src="https://i.imgur.com/Y8jOKg2.jpg" width="30px" alt="">
-            <p class="card-text ml-3"><small class="text-muted">Rafael Borges</small></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--/card texte-->
-
+<!--/card postagem-->
 
 
     <!--botão-->

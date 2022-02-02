@@ -6,7 +6,6 @@ export class PostagemModel{
     public titulo: string
     public texto: string
     public data: Date
-    public curtida: number
     public imagem: string
     public tema: TemaModel
     public usuario: UsuarioModel
