@@ -29,6 +29,7 @@ import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
 
 import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
 import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
+import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     LandingPageComponent,
     MenuLogadoComponent,
     TemaEditComponent,
-    TemaDeleteComponent
+    TemaDeleteComponent,
+    PostagemDeleteComponent
  
   ],
   imports: [
