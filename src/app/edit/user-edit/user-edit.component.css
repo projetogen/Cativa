@@ -1,0 +1,30 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  color: #181818;
+}
+
+input {
+  border: 2px solid #8A71B8;
+  border-radius: 25px;
+}
+
+h1 {
+  color: #8A71B8;
+  font-weight: 500;
+}
+
+.btn-atualizar {
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background: #8A71B8;
+  width: 50%;
+}
+
+.btn-cancelar {
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background: #D44F32;
+  width: 50%;
+}

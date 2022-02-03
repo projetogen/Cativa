@@ -4,7 +4,7 @@
 
     <div class="col-3 text-center">
       <div class="perfil">
-        <a href="">
+        <a [routerLink]="['/user-edit', id]" >
           <img src="{{foto}}" alt="Imagem do user" width="200px" height="200px" class="img-fluid rounded-circle pt-3 img-perfil">
         </a>
         <span class="btn-editar">Editar</span>
