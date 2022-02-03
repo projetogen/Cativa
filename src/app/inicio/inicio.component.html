@@ -24,12 +24,12 @@
       <!--baixo do card-->
       <div class="line"></div>
       <p class="data"> {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</p>
-      <button class="botao-editar">
+      <a [routerLink]="['/postagem-edit', item.id]" class="botao-editar">
         <img src="../../assets/icons/editar.svg" alt="">
-      </button>
-      <button class="botao-deletar">
+      </a>
+      <a [routerLink]="['/postagem-delete', item.id]" class="botao-deletar">
         <img src="../../assets/icons/deletar.svg" alt="">
-      </button>
+      </a>
       <!--/baixo do card-->
     </div>
     <!--/corpo do card-->

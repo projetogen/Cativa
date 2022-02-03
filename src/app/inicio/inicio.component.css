@@ -13,10 +13,10 @@
 
   .data {
     position: absolute;
-    width: 150px;
+    width: 200px;
     height: 0px;
     left: 10px;
-    top: 390px;
+    top: 387px;
     color: #555555;
     margin: 12px;
   }
