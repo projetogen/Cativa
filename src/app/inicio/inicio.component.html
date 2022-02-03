@@ -1,73 +1,115 @@
-<!--card postagem-->
-<div class="container p-0">
-  <div class="col-6">
+<!--container card-->
+<div class="container">
+  <div class="row d-felx justify-content-center">
+    <!--corpo do card-->
 
-    <div class="card-columns">
-      <div class="card text-center" *ngFor='let item of listaPostagens'>
-        <div class="card-body">
-          <h5 class="card-title m-0">{{item.titulo}}</h5>
-          <small class="text-muted"> Tema: {{item.tema.assunto}}</small>
-          <p class="card-text mt-3">{{item.texto}}</p>
-          <p class="card-text"><small class="text-muted">
-              {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
-            </small></p>
+    <div class="post-box" *ngFor='let item of listaPostagens'>
+      <!--topo do card-->
+      <div class="post-box-top">
+        <img class="usuario-foto" src="{{item.usuario.foto}}" alt="foto do usuario">
+        <h3 class="nome-position f-color">{{item.usuario.tipo}} | {{item.usuario.nome}}</h3>
+        <div class="post-box-tema">
+          <p class="tema-pisition ">{{item.tema.assunto}}</p>
+        </div>
+      </div>
+      <!--/topo do card-->
+      <!--itens centro do card-->
+      <div>
+        <h1 class="titulo-position">{{item.titulo}}</h1>
+        <p class="texto-position">{{item.texto}}
+        </p>
+        <img class="post-foto" src="{{item.imagem}}" alt="imagem da postagem">
+      </div>
+      <!--/itens centro do card-->
+      <!--baixo do card-->
+      <div class="line"></div>
+      <p class="data"> {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</p>
+      <button class="botao-editar">
+        <img src="../../assets/icons/editar.svg" alt="">
+      </button>
+      <button class="botao-deletar">
+        <img src="../../assets/icons/deletar.svg" alt="">
+      </button>
+      <!--/baixo do card-->
+    </div>
+    <!--/corpo do card-->
+  </div>
+  <!--botão-->
 
-          <p class="card-text"><small class="text-muted">
-              by: {{item.usuario.nome}}
-            </small></p>
+  <div class="col-6 my-3">
+    <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+      Nova Postagem</button>
+  </div>
+  <!--/botão-->
+</div>
+<!--/container card-->
 
-            <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3">Editar</a>
-            <a [routerLink]="['/postagem-delete', item.id]" class="text-danger">Apagar</a>
 
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nova Postagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input [(ngModel)]="postagem.titulo" type="text" class="form-control" id="titulo" placeholder="Digite o título">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea [(ngModel)]="postagem.texto" class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Escolha um tema ou <a data-dismiss="modal" data-target="#my-modal" routerLink="/tema">cadastre um novo</a>:
+          </label>
+          <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+            <option *ngFor='let item of listaMaterias' value='{{item.id}}'>{{item.assunto}}</option>
+          </select>
+        </div>
+
+        <div class="modal-footer pt-3 pb-0">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">Publicar</button>
         </div>
       </div>
     </div>
-<!--/card postagem-->
+  </div>
 
+  <!-- /Modal -->
 
-    <!--botão-->
-    <div class="col-6 my-3">
-      <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
-        Nova Postagem</button>
-    </div>
-    <!--/botão-->
+  <!--card postagem--
+      <div class="container p-0">
+        <div class="col-6">
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Nova Postagem</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
+          <div class="card-columns">
+            <div class="card text-center" *ngFor='let item of listaPostagens'>
+              <div class="card-body">
+                <h5 class="card-title m-0">{{item.titulo}}</h5>
+                <small class="text-muted"> Tema: {{item.tema.assunto}}</small>
+                <p class="card-text mt-3">{{item.texto}}</p>
+                <p class="card-text"><small class="text-muted">
+                    {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
+                  </small></p>
 
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="titulo">Título</label>
-              <input [(ngModel)]="postagem.titulo" type="text" class="form-control" id="titulo" placeholder="Digite o título">
-            </div>
+                <p class="card-text"><small class="text-muted">
+                    by: {{item.usuario.nome}}
+                  </small></p>
 
-            <div class="form-group">
-              <label for="texto">Texto</label>
-              <textarea [(ngModel)]="postagem.texto" class="form-control" name="texto" id="texto" rows="3"></textarea>
-            </div>
+                <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3">Editar</a>
+                <a [routerLink]="['/postagem-delete', item.id]" class="text-danger">Apagar</a>
 
-            <div class="form-group">
-              <label for="texto">Escolha um tema ou <a data-dismiss="modal" data-target="#my-modal" routerLink="/tema">cadastre um novo</a>:
-              </label>
-              <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
-                <option *ngFor='let item of listaMaterias' value='{{item.id}}'>{{item.assunto}}</option>
-              </select>
-            </div>
-
-            <div class="modal-footer pt-3 pb-0">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">Publicar</button>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- /Modal -->
+          <!--/card postagem-->
