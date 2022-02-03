@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuarioModel } from '../model/UsuarioModel';
 import { AuthService } from '../service/auth.service';
+import Swal from 'sweetalert2';
+import { HttpStatusCode } from '@angular/common/http';
 
 @Component({
   selector: 'app-cadastrar',
@@ -32,16 +34,51 @@ export class CadastrarComponent implements OnInit {
   }
 
   cadastrar() {
-    this.usuarioModel.tipo = this.tipoUsuario
+    this.usuarioModel.tipo = this.tipoUsuario;
 
-    if(this.usuarioModel.senha != this.confirmarSenha) {
-      alert('A senhas estão incorretas.')
+    if (this.usuarioModel.senha != this.confirmarSenha) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer);
+          toast.addEventListener('mouseleave', Swal.resumeTimer);
+        },
+      });
+
+      Toast.fire({
+        icon: 'error',
+        title: 'As senhas inseridas não são iguais!',
+      });
+    } else if (HttpStatusCode.BadRequest || HttpStatusCode.InternalServerError) {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer);
+          toast.addEventListener('mouseleave', Swal.resumeTimer);
+        },
+      });
+
+      Toast.fire({
+        icon: 'error',
+        title: 'Preencha os campos corretamente!',
+      });
     } else {
-      this.authService.cadastrar(this.usuarioModel).subscribe((resp: UsuarioModel) => {
-        this.usuarioModel = resp
-        this.router.navigate(['/entrar'])
-        alert('Usuário cadastrado com sucesso!')
-      })
+      this.authService
+        .cadastrar(this.usuarioModel)
+        .subscribe((resp: UsuarioModel) => {
+          this.usuarioModel = resp;
+          this.router.navigate(['/entrar']);
+          alert('Usuário cadastrado com sucesso!');
+        });
     }
+
   }
 }
