@@ -14,6 +14,12 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
+
+  foto = environment.foto
+  nome = environment.nome
+  tipo = environment.tipo
+ 
+
   postagem: PostagemModel = new PostagemModel();
   listaPostagens: PostagemModel[];
 

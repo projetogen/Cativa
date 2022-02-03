@@ -1,1 +1,44 @@
+/* Perfil do usuário */
+.nome-usuario {
+  font-size: 20px;
+}
+
+.btn-postagem {
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background: #8A71B8;
+  
+}
+
+.img-perfil{
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.img-perfil:hover{
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  filter: opacity(50%);
+  
+}
+.perfil:hover .btn-editar {
+  display: block;
+}
+
+.btn-editar {
+  display: none;
+  color: rgb(44, 44, 44);
+  width: 100%;
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  top: -4em;
+  left: 0.5em;
+}
+
+.ver-postagens {
+  text-decoration: none;
+  color: #8A71B8;
+}
 
