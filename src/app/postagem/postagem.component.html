@@ -1,76 +1,92 @@
-<body class="bg-light">
-  <div class="container ">
-    <div class="text-center my-5">
-      <h1>Postagens</h1>
-      <hr />
-    </div>
-    <div class="">
+<div class="container d-flex justify-content-center">
+  <div class="  flex-column-reverse ">
 
-      <div class="row">
-        <div class="col-lg-4 ">
-          <div class="card mb-5 shadow-sm borda">
-            <img src="../../assets/img/videogame-8bits.jpg" class="img-fluid rounded-top" />
+    <div class="card mb-3 shadow mb-5" style="max-width: 800px;" *ngFor='let item of listaPostagens'>
+      <div class="row no-gutters">
+        <div class=" rounded-left col-md-2 card-header bg-card-verde">
+          <img class="rounded-circle ml-3" src="{{item.usuario.foto}}" alt="" width="60px">
+        </div>
+        <div class="col-md-8 card-header bg-card-verde">
+          <h4 class="mt-3">{{item.usuario.nome}} | {{item.usuario.tipo}}</h4>
 
-            <div class="card-body">
-              <div class="card-title">
-                <h2>como começar a programar um jogo</h2>
-              </div>
-              <div class="card-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Deleniti corporis quis ab. Exercitationem et quibusdam
-                  impedit? Sint vitae labore nulla sit, dignissimos non tempore,
-                  maxime facere, quod harum aliquid in...
-                </p>
-              </div>
-              <a href="#"><img src="../../assets/icons/ler mais.svg" width="120px"></a>
-            </div>
+        </div>
+        <div class="col-md-2 card-header bg-tema-rosa rounded-right">
+          <p class="font-weight-bolder d-flex mt-3 justify-content-center">{{item.tema.assunto}}</p>
+        </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <h5 class="card-title">{{item.titulo}}</h5>
+            <p class="card-text">{{item.texto}}</p>
           </div>
         </div>
-
-        <div class="col-lg-4 ">
-          <div class="card mb-5 shadow-sm borda">
-            <img src="../../assets/img/top-10-books-every-college-student-read-1024x640-1.jpeg" class="img-fluid rounded-top" />
-
-            <div class="card-body">
-              <div class="card-title">
-                <h2>The books on de table</h2>
-              </div>
-              <div class="card-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Deleniti corporis quis ab. Exercitationem et quibusdam
-                  impedit? Sint vitae labore nulla sit, dignissimos non tempore,
-                  maxime facere, quod harum aliquid in...
-                </p>
-              </div>
-              <a href="#"><img src="../../assets/icons/ler mais.svg" width="120px"></a>
-            </div>
-          </div>
+        <div class="col-md-5">
+          <img src="../../assets/img/tema-ciencia.png" class="w-100 pt-3 pr-3 rounded" alt="...">
         </div>
-
-        <div class="col-lg-4">
-          <div class="card mb-5 shadow-sm borda">
-            <img src="../../assets/img/baleia-branca-191496770.jpg" class="img-fluid img-fluid rounded-top" />
-
-            <div class="card-body">
-              <div class="card-title">
-                <h2>Como cuidar de uma baleia</h2>
-              </div>
-              <div class="card-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Deleniti corporis quis ab. Exercitationem et quibusdam
-                  impedit? Sint vitae labore nulla sit, dignissimos non tempore,
-                  maxime facere, quod harum aliquid in...
-                </p>
-              </div>
-              <a href="#"><img src="../../assets/icons/ler mais.svg" width="120px"></a>
-            </div>
-          </div>
+        <div class="col-md-7">
+          <p class="card-text m-3"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
+        </div>
+        <div class="col-md-5 d-flex justify-content-end">
+          <a class="mt-3 mr-1" [routerLink]="['/postagem-edit', item.id]">
+            <img src="../../assets/icons/editar.svg" alt="">
+          </a>
+          <a class="m-3 ml-2" [routerLink]="['/postagem-delete', item.id]">
+            <img src="../../assets/icons/deletar.svg" alt="">
+          </a>
         </div>
       </div>
     </div>
   </div>
 
-</body>
+</div>
+
+
+
+
+
+<!--botão-->
+<div class="col-6 my-3">
+  <button class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
+    Nova Postagem</button>
+</div>
+<!--/botão-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nova Postagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="titulo">Título</label>
+          <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo" placeholder="Digite o título">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Escolha um tema ou <a data-dismiss="modal" data-target="#my-modal" routerLink="/tema">cadastre um novo</a>:
+          </label>
+          <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+            <option *ngFor='let item of listaMaterias' value='{{item.id}}'>{{item.assunto}}</option>
+          </select>
+        </div>
+
+        <div class="modal-footer pt-3 pb-0">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success" (click)='publicar()' data-dismiss="modal">Publicar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+

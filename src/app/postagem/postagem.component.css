@@ -1,3 +1,10 @@
-.borda {
-  border-radius: 5%;
+.bg-card-verde {
+  background-color: #5b822b;
+}
+.bg-tema-rosa {
+  background-color: #fae5e5;
+}
+
+.card-header:first-child {
+  border-radius: 0px;
 }
