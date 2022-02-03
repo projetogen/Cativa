@@ -1,0 +1,29 @@
+h1 {
+  color: #8A71B8;
+  font-weight: 500;
+}
+
+h3 {
+  color: #748748;
+}
+
+h4 {
+  color: rgb(29, 29, 29);
+}
+
+h5 {
+  text-align: center;
+}
+
+.btn-cadastrar {
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background: #8A71B8;
+}
+
+input {
+  border: 2px solid #8A71B8;
+  border-radius: 25px;
+  padding: 0 5px;
+}

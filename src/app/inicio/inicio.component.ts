@@ -18,6 +18,7 @@ export class InicioComponent implements OnInit {
   foto = environment.foto
   nome = environment.nome
   tipo = environment.tipo
+  id = environment.id
  
 
   postagem: PostagemModel = new PostagemModel();
