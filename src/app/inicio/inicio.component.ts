@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 import { PostagemModel } from '../model/PostagemModel';
 import { TemaModel } from '../model/TemaModel';
 import { UsuarioModel } from '../model/UsuarioModel';
@@ -84,7 +85,22 @@ export class InicioComponent implements OnInit {
     this.postagemService
       .postPostagem(this.postagem).subscribe((resp: PostagemModel) => {
         this.postagem = resp;
-        alert('Postagem realizada com sucesso!');
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+          }
+        })
+        
+        Toast.fire({
+          icon: 'success',
+          title: 'Publicado com sucesso!'
+        })
         this.postagem = new PostagemModel();
         this.getAllPostagens()
       });
