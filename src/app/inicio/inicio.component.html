@@ -102,7 +102,7 @@
       <!--Cards de postagem-->
       <h1 class="fs-54 text-start my-5 ml-4">Todas as Postagens</h1>
       <div class="container d-flex justify-content-start m-3">
-        <div class="flex-column-reverse">
+        <div class="d-flex flex-column-reverse">
 
           <div class="card mb-3 shadow mb-5" style="max-width: 900px;" *ngFor='let item of listaPostagens'>
             <div class="row no-gutters">
@@ -122,7 +122,7 @@
                 </div>
               </div>
               <div class="col-md-5 pt-5 pr-3 pb-3">
-                <img src="../../assets/img/tema-ciencia.png" class="w-100  rounded-lg" alt="...">
+                <img src="{{item.imagem}}" class="w-100  rounded-lg" alt="imagem de postagem">
               </div>
               <div class="col-md-7 border-top">
                 <p class="card-text m-3"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
@@ -167,6 +167,11 @@
         <div class="form-group">
           <label for="texto">Texto</label>
           <textarea [(ngModel)]="postagem.texto" class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="url">Link da foto</label>
+          <textarea [(ngModel)]="postagem.imagem" class="form-control" name="foto" id="foto" rows="1"></textarea>
         </div>
 
         <div class="form-group">
