@@ -5,6 +5,7 @@ import { TemaModel } from 'src/app/model/TemaModel';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-postagem-edit',
@@ -61,7 +62,22 @@ export class PostagemEditComponent implements OnInit {
 
     this.postagemService.putPostagem(this.postagem).subscribe((resp: PostagemModel) => {
       this.postagem = resp
-      alert("Postagem atualizada com sucesso!")
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: 'Postagem atualizada com sucesso!'
+      })
       this.router.navigate(['/inicio'])
     })
   }
