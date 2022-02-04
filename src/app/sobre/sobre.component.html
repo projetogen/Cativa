@@ -1,15 +1,17 @@
+<app-menu></app-menu>
+
 <div class="container" id="sobre">
 
     <div class="row mt-5 mb-5">
 
-        <div class="col-md-8 p-15" style="font-size: 16px;">
+        <div class="col-md-8 p-15" id="div3" style="font-size: 16px;">
 
-            <h1>Sobre nós</h1>
+            <h1 class="d-flex justify-content-center">Sobre nós</h1>
 
-            <p>
-                A cativa é um projeto de educação complementar que visa contribuir com a democratização e melhoria no
+            <p class="p1">
+                A Cativa é um projeto de educação complementar que visa contribuir com a democratização e melhoria no
                 ensino
-                brasileiro, com o intuito de agregar na educação infantil e juvenil, e na amplitude da alfabetização
+                brasileiro, com o intuito de agregar na educação infantil e juvenil e na amplitude da alfabetização
                 de
                 jovens
                 e adultos. Contamos com a contribuição de parceiros e voluntários que atuam na área da pedagogia, para
@@ -18,13 +20,13 @@
             </p>
 
 
-            <h2>Contra o analfabetismo</h2>
+            <h2 class="d-flex justify-content-center">Contra o analfabetismo</h2>
 
-            <p>
+            <p class="p1">
                 No Brasil, em 1960, Paulo Freire desenvolveu a metodologia de alfabetização que realizou, entre
                 outros
                 feitos, a
-                possibilidade de alfabetizar 300 cortadores de cana no Rio Grande do Norte, em apenas 45 dias. Paulo
+                possibilidade de alfabetizar 300 cortadores de cana no Rio Grande do Norte em apenas 45 dias. Paulo
                 Freire
                 ficou conhecido, assim, pelo método de alfabetização para adultos que leva seu nome. Dessa forma, o
                 pensamento
@@ -33,7 +35,7 @@
                 sociais menos favorecidas e que, na época, não eram totalmente atendidas pelas escolas públicas.
             </p>
 
-            <p>
+            <p class="p1">
                 A metodologia de Paulo Freire consiste em uma maneira de educar conectada ao cotidiano dos
                 estudantes e
                 às
@@ -46,12 +48,11 @@
            
             <a href="https://www.geledes.org.br/metodo-paulo-freire-de-alfabetizacao-as-lembrancas-emocionadas-da-1-turma/?gclid=Cj0KCQiAraSPBhDuARIsAM3Js4oez1ga60wB4NNfbH1GsPXpivZgK_aYDuqF1YoNvGUeq_wAJ97zPi4aAo7SEALw_wcB" target="_blank">saiba mais sobre o método</a>
 
-            <li><a href="/time">Desenvolvedores</a></li>
+            <li><a routerLink="/time">Desenvolvedores</a></li>
 
         </div>
 
-
-        <div class="col-md-4">
+        <div class="col-md-4 mt-3">
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="../../assets/img/ato-paulo-freire-setembro.jpg"
                     alt="../../assets/img/ato-paulo-freire-setembro.jpg">
@@ -59,6 +60,7 @@
                     <p class="card-text">“Educação não transforma o mundo. Educação muda as pessoas. Pessoas
                         transformam
                         o mundo”</p>
+                        <p>- Paulo Freire</p>
                 </div>
             </div>
 
@@ -67,3 +69,4 @@
     </div>
 
 </div>
+<app-footer></app-footer>
