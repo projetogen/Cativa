@@ -12,3 +12,18 @@
 p {
   text-align: justify;
 }
+
+.bx.bxl-github{
+  font-size: 30px;
+  color: rgba(103, 23, 179, 0.945);
+ }
+ .bx.bxl-linkedin-square{
+  font-size: 30px;
+  color: rgba(103, 23, 179, 0.945);
+ }
+
+/*#div1 { /*imagem de fundo*
+  background: url(../../assets/img/logo_cativa.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}*/
