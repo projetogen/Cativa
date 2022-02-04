@@ -2,7 +2,25 @@
      font-family: "Poppins";
     border: none;
     text-decoration: none;
-    
+}
+#div3{
+    margin-right:2,5cm;
+    margin-left: 2,5cm;
+    margin-top: 1cm;
+    padding-bottom: 1cm ;
+    padding-left: 2cm;
+    /*padding-left: 3cm;*/
+}
+
+.p1{
+    text-indent: 50px;
+}
+
+h1{
+   font-size: xx-large;   
+}
+h2{
+    font-size: xx-large;
 }
 
 .card-text{
@@ -10,4 +28,8 @@
 border: none;
 text-decoration: none;
 font-size: x-large;
+}
+
+#sobre{
+    background-color: rgb(216, 182, 238);
 }
