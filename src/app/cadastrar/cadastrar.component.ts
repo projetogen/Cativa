@@ -4,6 +4,7 @@ import { UsuarioModel } from '../model/UsuarioModel';
 import { AuthService } from '../service/auth.service';
 import Swal from 'sweetalert2';
 import { HttpStatusCode } from '@angular/common/http';
+import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-cadastrar',

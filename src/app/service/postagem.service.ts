@@ -27,6 +27,10 @@ export class PostagemService {
     return this.http.get<PostagemModel[]>(`http://localhost:8080/postagem/titulo/${titulo}`, this.token)
   }
 
+  getByTemaId(id: number): Observable<PostagemModel[]> {
+    return this.http.get<PostagemModel[]>(`http://localhost:8080/postagem/ByTemaId/${id}`, this.token)
+  }
+
   postPostagem(postagem: PostagemModel): Observable<PostagemModel> {
 
     return this.http.post<PostagemModel>('http://localhost:8080/postagem/save', postagem, this.token)

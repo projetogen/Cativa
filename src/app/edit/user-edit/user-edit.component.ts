@@ -62,32 +62,34 @@ export class UserEditComponent implements OnInit {
         title: 'As senhas inseridas não são iguais!',
       });
     } else {
-      this.authService.cadastrar(this.user).subscribe((resp: UsuarioModel) => {
-        this.user = resp;
-        this.router.navigate(['/inicio']);
-        environment.token = '';
-        environment.nome = '';
-        environment.foto = '';
-        environment.id = 0;
+      this.authService
+        .atualizarUsuario(this.user)
+        .subscribe((resp: UsuarioModel) => {
+          this.user = resp;
+          this.router.navigate(['/inicio']);
+          environment.token = '';
+          environment.nome = '';
+          environment.foto = '';
+          environment.id = 0;
 
-        const Toast = Swal.mixin({
-          toast: true,
-          position: 'top',
-          showConfirmButton: false,
-          timer: 3000,
-          timerProgressBar: true,
-          didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer);
-            toast.addEventListener('mouseleave', Swal.resumeTimer);
-          },
-        });
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer);
+              toast.addEventListener('mouseleave', Swal.resumeTimer);
+            },
+          });
 
-        Toast.fire({
-          icon: 'success',
-          title: 'Tema apagado com sucesso!',
+          Toast.fire({
+            icon: 'success',
+            title: 'Usuário editado com sucesso!',
+          });
+          this.router.navigate(['/entrar']);
         });
-        this.router.navigate(['/entrar']);
-      });
     }
   }
 
