@@ -25,6 +25,11 @@
   display: block;
 }
 
+.nodeco{
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .btn-editar {
   display: none;
   color: rgb(44, 44, 44);
