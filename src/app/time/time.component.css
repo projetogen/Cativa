@@ -8,22 +8,42 @@
   width: 180px;
   height: 180px;
   border-radius: 50%;
-}
-p {
-  text-align: justify;
+  margin-bottom: 20px;
 }
 
-.bx.bxl-github{
-  font-size: 30px;
-  color: rgba(103, 23, 179, 0.945);
- }
- .bx.bxl-linkedin-square{
-  font-size: 30px;
-  color: rgba(103, 23, 179, 0.945);
- }
+h3{
+  color: #51735F;
+  margin-bottom: 20px;
+}
 
-/*#div1 { /*imagem de fundo*
-  background: url(../../assets/img/logo_cativa.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}*/
+p{
+  font-size: 18px;
+  height: 216px;
+  color: #B45F00;
+}
+
+.title{
+  font-size: 48px;
+  color: #51735F;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.bx.bxl-github {
+  font-size: 40px;
+  color: #547131;
+}
+
+.bx.bxl-linkedin-square {
+  font-size: 40px;
+  color: #547131;
+}
+
+.bg-principal{
+  background-color: #F3E9D9;
+}
+
+.toptext{
+  font-size: 24px;
+  color: #547131;
+}
