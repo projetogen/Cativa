@@ -1,34 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 .principal{
-    background-color: #FAE5E5;
+    background-color: #faf2e5;
 }
 
 #mainpurplebutton{
     background-color: #8A71B8;
     color: #F9F9F9;
     width: 184px;
-    height: 70px;
+    height: 60px;
     align-self: start;
     margin-top: 40px;
     margin-bottom: 40px;
-    border-radius: 40px;
+    border-radius: 30px;
 }
 
 .fs-24{
     font-size: 24px;
 }
 
+.fs-color{
+  color: #8A71B8;
+}
+
 .poppins{
     font-family: 'Poppins', sans-serif;
     color: #5B822B;
+    font-weight: bold;
 }
 
-.dmsans{
-    font-family: 'DM Sans', sans-serif;
+.Montserrat{
+  font-family: 'Montserrat', sans-serif;
     color: gray;
-} 
+    font-size: x-large;
+}
 
 .title{
     font-size: 80px;

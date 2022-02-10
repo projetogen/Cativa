@@ -3,11 +3,20 @@
 }
 .dmsans {
   font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 p {
-  color: #748748;
+  color: #547131;
 }
 p:hover {
   color: #d44f32;
+}
+
+.bg-menu{
+  background-color: #FAF2E5;
+}
+
+.svg-color{
+  fill:#547131;
 }
 
