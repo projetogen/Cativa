@@ -1,5 +1,6 @@
 .container-fluid {
-  background-color: #fff;
+  background-color: #283A2C;
+  ;
 }
 a {
   text-decoration: none;
@@ -7,15 +8,16 @@ a {
   font-size: 16px;
   font-weight: 400;
   line-height: 20, 83px;
-  color: #748748;
+  color: #FFFFFF;
   font-weight: 700;
 }
 
 h4 {
   font: Poppins;
+  color: #FFFFFF;
 }
 #list-contact {
-  color: #748748;
+  color: #FFFFFF;
   font-family: dm-sans;
   font-size: 16px;
 }

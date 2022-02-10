@@ -7,25 +7,23 @@
   border-radius: 25px;
   border: none;
   color: white;
-  background: #8A71B8;
-
+  background: #8a71b8;
 }
 
-.img-perfil{
+.img-perfil {
   transition: all 0.5s;
   cursor: pointer;
 }
 
-.img-perfil:hover{
+.img-perfil:hover {
   transform: scale(1.1);
   filter: opacity(50%);
-
 }
 .perfil:hover .btn-editar {
   display: block;
 }
 
-.nodeco{
+.nodeco {
   text-decoration: none;
   cursor: pointer;
 }
@@ -41,11 +39,40 @@
   left: 0.5em;
 }
 
-.ver-postagens {
-  text-decoration: none;
-  color: #8A71B8;
+#mainpurplebutton {
+  background-color: #8a71b8;
+  color: #f9f9f9;
+  width: 158px;
+  height: 44px;
+  align-self: start;
+  margin-top: 50px;
+  margin-bottom: 43px;
+  border-radius: 50px;
 }
 
-.bg-rosa{
-  background-color: #FAE5E5;
+.mt-80 {
+  margin-top: 80px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+  color: #5b822b;
+  font-weight: bold;
+}
+
+.bg-temas {
+  background-color: #f3e9d9;
+}
+
+.bg-postagem {
+  background-color: #faf2e5;
+}
+
+.fixed {
+  position: fixed;
+  left: 36.5px;
 }

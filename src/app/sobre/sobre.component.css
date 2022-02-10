@@ -1,35 +1,61 @@
-*{
-     font-family: "Poppins";
-    border: none;
-    text-decoration: none;
-}
-#div3{
-    margin-right:2,5cm;
-    margin-left: 2,5cm;
-    margin-top: 1cm;
-    padding-bottom: 1cm ;
-    padding-left: 2cm;
-    /*padding-left: 3cm;*/
+* {
+  font-family: "Poppins";
+  border: none;
+  text-decoration: none;
 }
 
-.p1{
-    text-indent: 50px;
+.title {
+  font-size: 48px;
+  color: #51735f;
+  margin-bottom: 40px;
+  margin-top: 82px;
 }
 
-h1{
-   font-size: xx-large;   
-}
-h2{
-    font-size: xx-large;
-}
-
-.card-text{
-    font-family: "Josefin Sans";
-border: none;
-text-decoration: none;
-font-size: x-large;
+.text1 {
+  font-size: 18px;
+  letter-spacing: 0.115em;
+  color: #b45f00;
+  max-width: 660px;
 }
 
-#sobre{
-    background-color: rgb(216, 182, 238);
+.bg-principal {
+  background-color: #f3e9d9;
+}
+
+.bloco1 {
+  padding-left: 150px;
+  margin-bottom: 82px;
+}
+
+.bloco2 {
+  padding-right: 104px;
+  padding-top: 65px;
+}
+
+.text2 {
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.115em;
+  color: #5f763c;
+  max-width: 860px;
+  margin-bottom: 40px;
+}
+
+.bg2 {
+  background-color: #faf2e5;
+}
+
+.text3 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.buttonbackground{
+    background-color: #51735f;
+    width: 384px;
+    border-radius: 30px;
+    margin-bottom: 35px;
 }
