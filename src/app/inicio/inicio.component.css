@@ -65,7 +65,8 @@
 }
 
 .bg-temas {
-  background-color: #f3e9d9;
+  background:#F3E9D9;
+ /*cor pra ficar tudo uniforme = #F3E9D9*/
 }
 
 .bg-postagem {
@@ -73,6 +74,6 @@
 }
 
 .fixed {
-  position: fixed;
-  left: 36.5px;
+  position: sticky;
+  top: 0px;
 }

@@ -1,7 +1,6 @@
 <div class="container-fluid">
-  <div class="d-flex flex-column">
   <div class="row">
-    <div class="col-lg-3 bg-temas">
+  <div class="col-md-3 bg-temas">
       <!-- perfil do usuario -->
       <div class="text-center pt-4 fixed">
         <div class="perfil">
@@ -33,7 +32,7 @@
     </div>
 
     <!-- Cards das materias -->
-    <div class="col-lg bg-temas">
+    <div class="col-md-9 bg-postagem d-flex flex-column">
       <div class="container-fluid card-deck justify-content-center m-0">
         <div class="row p-3 text-center">
           <div class="card">
@@ -152,87 +151,87 @@
           Todos os temas
         </button>
       </div>
-    </div>
-  </div>
-  <!--/card de temas-->
-
-  <!--Cards de postagem-->
-  <div class="row bg-postagem">
-    <div class="col-lg-3"></div>
-
-    <div class="col-lg">
-      <h1 class="fs-54 text-start my-5 ml-4">Todas as Postagens</h1>
-      <div class="container d-flex justify-content-start m-3">
-        <div class="d-flex flex-column-reverse">
-          <div
-            class="card mb-3 shadow mb-5"
-            style="max-width: 900px"
-            *ngFor="let item of listaPostagens"
-          >
-            <div class="row no-gutters">
-              <div
-                class="col-md-10 card-header bg-white d-flex align-items-center"
-              >
-                <img
-                  class="rounded-circle ml-3"
-                  src="{{ item.usuario.foto }}"
-                  alt=""
-                  width="60px"
-                />
-                <p class="mt-3 ml-3">
-                  {{ item.usuario.nome }} | {{ item.usuario.tipo }}
-                </p>
-              </div>
-              <div
-                class="col-md-2 card-header bg-white rounded-right border-left"
-              >
-                <p
-                  class="font-weight-bolder d-flex mt-3 justify-content-center"
+      <!--/materias-->
+      <!--postagens-->
+      <div class="row bg-postagem">
+    
+          <div class="col-lg">
+            <h1 class="fs-54 text-start my-5 ml-4">Todas as Postagens</h1>
+            <div class="container d-flex justify-content-center m-3">
+              <div class="d-flex flex-column-reverse">
+                <div
+                  class="card mb-3 shadow mb-5"
+                  style="max-width: 900px"
+                  *ngFor="let item of listaPostagens"
                 >
-                  {{ item.tema.assunto }}
-                </p>
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title">{{ item.titulo }}</h5>
-                  <p class="card-text">{{ item.texto }}</p>
+                  <div class="row no-gutters">
+                    <div
+                      class="col-md-10 card-header bg-white d-flex align-items-center"
+                    >
+                      <img
+                        class="rounded-circle ml-3"
+                        src="{{ item.usuario.foto }}"
+                        alt=""
+                        width="60px"
+                      />
+                      <p class="mt-3 ml-3">
+                        {{ item.usuario.nome }} | {{ item.usuario.tipo }}
+                      </p>
+                    </div>
+                    <div
+                      class="col-md-2 card-header bg-white rounded-right border-left"
+                    >
+                      <p
+                        class="font-weight-bolder d-flex mt-3 justify-content-center"
+                      >
+                        {{ item.tema.assunto }}
+                      </p>
+                    </div>
+                    <div class="col-md-7">
+                      <div class="card-body">
+                        <h5 class="card-title">{{ item.titulo }}</h5>
+                        <p class="card-text">{{ item.texto }}</p>
+                      </div>
+                    </div>
+                    <div class="col-md-5 pt-5 pr-3 pb-3">
+                      <img
+                        src="{{ item.imagem }}"
+                        class="w-100 rounded-lg"
+                        alt="imagem de postagem"
+                      />
+                    </div>
+                    <div class="col-md-7 border-top">
+                      <p class="card-text m-3">
+                        <small class="text-muted"
+                          >{{ item.data | date: "dd/MM/yyyy" }} às
+                          {{ item.data | date: "HH:mm" }}</small
+                        >
+                      </p>
+                    </div>
+                    <div class="col-md-5 d-flex justify-content-end border-top">
+                      <a
+                        class="mt-3 mr-1"
+                        [routerLink]="['/postagem-edit', item.id]"
+                      >
+                        <img src="../../assets/icons/editar.svg" alt="" />
+                      </a>
+                      <a
+                        class="m-3 ml-2"
+                        [routerLink]="['/postagem-delete', item.id]"
+                      >
+                        <img src="../../assets/icons/deletar.svg" alt="" />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-5 pt-5 pr-3 pb-3">
-                <img
-                  src="{{ item.imagem }}"
-                  class="w-100 rounded-lg"
-                  alt="imagem de postagem"
-                />
-              </div>
-              <div class="col-md-7 border-top">
-                <p class="card-text m-3">
-                  <small class="text-muted"
-                    >{{ item.data | date: "dd/MM/yyyy" }} às
-                    {{ item.data | date: "HH:mm" }}</small
-                  >
-                </p>
-              </div>
-              <div class="col-md-5 d-flex justify-content-end border-top">
-                <a class="mt-3 mr-1" [routerLink]="['/postagem-edit', item.id]">
-                  <img src="../../assets/icons/editar.svg" alt="" />
-                </a>
-                <a
-                  class="m-3 ml-2"
-                  [routerLink]="['/postagem-delete', item.id]"
-                >
-                  <img src="../../assets/icons/deletar.svg" alt="" />
-                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        <!--/postagens-->
     </div>
   </div>
-  </div>
 </div>
-<!--/Cards de postagem-->
 
 <!-- Modal -->
 <div
