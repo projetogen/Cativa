@@ -16,23 +16,23 @@ export class TemaService {
   }
 
   getAllTema(): Observable<TemaModel[]> {
-    return this.http.get<TemaModel[]>('http://localhost:8080/tema', this.token)
+    return this.http.get<TemaModel[]>('https://projetointegrador-educacao.herokuapp.com/tema', this.token)
   }
 
   getByIdTema(id: number): Observable<TemaModel> {
-    return this.http.get<TemaModel>(`http://localhost:8080/tema/${id}`, this.token)
+    return this.http.get<TemaModel>(`https://projetointegrador-educacao.herokuapp.com/tema/${id}`, this.token)
   }
 
   postTema(tema: TemaModel): Observable<TemaModel> {
-    return this.http.post<TemaModel>('http://localhost:8080/tema/save', tema, this.token)
+    return this.http.post<TemaModel>('https://projetointegrador-educacao.herokuapp.com/tema/save', tema, this.token)
   }
   
   putTema(tema: TemaModel): Observable<TemaModel> {
-    return this.http.put<TemaModel>('http://localhost:8080/tema/update', tema, this.token)
+    return this.http.put<TemaModel>('https://projetointegrador-educacao.herokuapp.com/tema/update', tema, this.token)
   }
 
   deleteTema(id: number) {
-    return this.http.delete(`http://localhost:8080/tema/${id}`, this.token)
+    return this.http.delete(`https://projetointegrador-educacao.herokuapp.com/tema/${id}`, this.token)
   }
 
 }
