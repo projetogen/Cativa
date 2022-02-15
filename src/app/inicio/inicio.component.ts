@@ -20,7 +20,8 @@ export class InicioComponent implements OnInit {
   nome = environment.nome
   tipo = environment.tipo
   id = environment.id
- 
+  
+
 
   postagem: PostagemModel = new PostagemModel();
   listaPostagens: PostagemModel[];
@@ -96,7 +97,7 @@ export class InicioComponent implements OnInit {
             toast.addEventListener('mouseleave', Swal.resumeTimer)
           }
         })
-        
+
         Toast.fire({
           icon: 'success',
           title: 'Publicado com sucesso!'

@@ -19,6 +19,8 @@ h1 {
   color: white;
   background: #8A71B8;
   width: 50%;
+  height: 40px;
+  font-size: 23px;
 }
 
 .btn-cancelar {
@@ -27,4 +29,10 @@ h1 {
   color: white;
   background: #D44F32;
   width: 50%;
+  height: 40px;
+  font-size: 23px;
+}
+
+.bg-principal{
+  background-color: #F3E9D9;
 }
