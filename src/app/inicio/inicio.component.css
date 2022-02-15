@@ -77,3 +77,10 @@
   height: 1px;
   margin-left: 17px;
 }
+
+.bg-card{
+  background-color: white;
+  border-radius: 20px;
+  width: 70%;
+  height: 390px;
+}

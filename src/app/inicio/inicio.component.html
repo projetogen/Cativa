@@ -1,8 +1,8 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3 bg-postagem">
+    <div class="col-md-3 bg-postagem d-flex justify-content-center">
       <!-- perfil do usuario -->
-      <div class="text-center pt-4 fixed">
+      <div class="text-center py-4 fixed bg-card">
         <div class="perfil">
           <a [routerLink]="['/user-edit', id]">
             <img src="{{ foto }}" alt="Imagem do user" width="200px" height="200px" class="img-fluid rounded-circle img-perfil" />
@@ -10,7 +10,7 @@
         </div>
 
         <p class="mt-3 nome-usuario">{{ nome }}</p>
-        <p>{{tipo}}</p>
+        <p>Alune</p>
         <!--botão Cadastrar Nova Postagem-->
         <button class="btn btn-secondary text-center btn-postagem" data-toggle="modal" data-target="#exampleModal">
           Nova Postagem
@@ -124,7 +124,7 @@
                   <div class="col-md-10 card-header bg-white d-flex align-items-center">
                     <img class="rounded-circle ml-3" src="{{ item.usuario.foto }}" alt="" width="60px" />
                     <p class="mt-3 ml-3">
-                      {{ item.usuario.nome }} | {{ item.usuario.tipo }}
+                      {{ item.usuario.nome }} | Alune
                     </p>
                   </div>
                   <div class="col-md-2 card-header bg-white rounded-right border-left">

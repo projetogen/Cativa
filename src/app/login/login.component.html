@@ -5,9 +5,9 @@
     <div class="col-md-6">
       <!-- Campos do cadastro -->
       <div class="row d-flex justify-content-center">
-        <div class="col-md-7 bg-branco shadow-lg p-5 bg-white rounded">
+        <div class="col-md-7 bg-branco shadow-lg pt-5 px-5 pb-4 bg-white rounded">
 
-          <h1 class="text-start">Que bom que você chegou !</h1>
+          <h1 class="text-start">Boas vindas !</h1>
           <h5 class="text-start pb-3">Não possui uma conta? <a routerLink='/cadastrar'><span class="bg-logar">Cadastrar</span></a></h5>
 
           <div class="form-group">
@@ -22,12 +22,18 @@
             <input [(ngModel)]="userLogin.senha" class="form-control mt-2" type="password" name="senha" id="senha" placeholder="Digite sua senha" />
           </div>
           <div class=" d-flex justify-content-center pt-3">
-            <button type="submit" class="btn btn-success btn-cadastrar" (click)="entrar()">Login</button>
+            <button type="submit" class="btn  btn-cadastrar" (click)="entrar()">Login</button>
           </div>
+
+          <div class="col pt-4">
+            <div class="line"></div>
+          </div>
+
+          <div class=" d-flex justify-content-center align-items-center pt-3">
+            <button type="submit" class="btn-voltar d-flex justify-content-center align-items-center" routerLink="/landingPage">voltar</button>
+          </div>
+
         </div>
-
-
-
       </div>
     </div>
   </div>

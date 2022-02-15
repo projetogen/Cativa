@@ -27,3 +27,12 @@ input {
   border-radius: 25px;
   padding: 0 5px;
 }
+
+.bg-principal{
+  background-color: #F3E9D9;
+}
+
+.bg-secundario{
+  background-color: white;
+  border-radius: 10px;
+}
