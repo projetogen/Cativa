@@ -1,23 +1,37 @@
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #181818;
 }
 
+.bg-fundo {
+  background-color: #fffcf7;
+}
+
+.bg-branco {
+  background-color: white;
+}
+
 input {
-  border: 2px solid #8A71B8;
-  border-radius: 25px;
+  border: 2px solid #8a71b8;
+  border-radius: 10px;
 }
 
 h1 {
-  color: #8A71B8;
-  font-weight: 500;
+  color: #8a71b8;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+h5 {
+  font-weight: 300;
+  font-size: 24px;
 }
 
 .btn-cadastrar {
   border-radius: 25px;
   border: none;
   color: white;
-  background: #8A71B8;
+  background: #8a71b8;
   width: 50%;
 }
 
@@ -25,6 +39,17 @@ h1 {
   border-radius: 25px;
   border: none;
   color: white;
-  background: #D44F32;
+  background: #d44f32;
   width: 50%;
 }
+
+.full-width {
+  min-height: 100vh;
+}
+
+.bg-logar {
+  color: #547131;
+}
+
+
+
