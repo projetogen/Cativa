@@ -16,32 +16,32 @@ export class PostagemService {
   }
 
   getAllPostagens(): Observable<PostagemModel[]> {
-    return this.http.get<PostagemModel[]>('http://localhost:8080/postagem', this.token)
+    return this.http.get<PostagemModel[]>('https://projetointegrador-educacao.herokuapp.com/postagem', this.token)
   }
 
   getByIdPostagem(id: number): Observable<PostagemModel> {
-    return this.http.get<PostagemModel>(`http://localhost:8080/postagem/${id}`, this.token)
+    return this.http.get<PostagemModel>(`https://projetointegrador-educacao.herokuapp.com/postagem/${id}`, this.token)
   }
 
   getByTitulo(titulo: string): Observable<PostagemModel[]> {
-    return this.http.get<PostagemModel[]>(`http://localhost:8080/postagem/titulo/${titulo}`, this.token)
+    return this.http.get<PostagemModel[]>(`https://projetointegrador-educacao.herokuapp.com/postagem/titulo/${titulo}`, this.token)
   }
 
   getByTemaId(id: number): Observable<PostagemModel[]> {
-    return this.http.get<PostagemModel[]>(`http://localhost:8080/postagem/ByTemaId/${id}`, this.token)
+    return this.http.get<PostagemModel[]>(`https://projetointegrador-educacao.herokuapp.com/postagem/ByTemaId/${id}`, this.token)
   }
 
   postPostagem(postagem: PostagemModel): Observable<PostagemModel> {
 
-    return this.http.post<PostagemModel>('http://localhost:8080/postagem/save', postagem, this.token)
+    return this.http.post<PostagemModel>('https://projetointegrador-educacao.herokuapp.com/postagem/save', postagem, this.token)
   }
 
   putPostagem(postagem: PostagemModel): Observable<PostagemModel> {
-    return this.http.put<PostagemModel>('http://localhost:8080/postagem/update', postagem, this.token)
+    return this.http.put<PostagemModel>('https://projetointegrador-educacao.herokuapp.com/postagem/update', postagem, this.token)
   }
 
   deletePostagem(id: number) {
-    return this.http.delete(`http://localhost:8080/postagem/remove/${id}`, this.token)
+    return this.http.delete(`https://projetointegrador-educacao.herokuapp.com/postagem/remove/${id}`, this.token)
   }
 
 }
