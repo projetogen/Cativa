@@ -1,46 +1,31 @@
 <div class="container-fluid">
   <div class="row">
-  <div class="col-md-3 bg-temas">
+    <div class="col-md-3 bg-postagem">
       <!-- perfil do usuario -->
       <div class="text-center pt-4 fixed">
         <div class="perfil">
           <a [routerLink]="['/user-edit', id]">
-            <img
-              src="{{ foto }}"
-              alt="Imagem do user"
-              width="200px"
-              height="200px"
-              class="img-fluid rounded-circle img-perfil"
-            />
+            <img src="{{ foto }}" alt="Imagem do user" width="200px" height="200px" class="img-fluid rounded-circle img-perfil" />
           </a>
-          <span class="btn-editar">Editar</span>
         </div>
 
         <p class="mt-3 nome-usuario">{{ nome }}</p>
-        <p>{{ tipo }}</p>
+        <p>{{tipo}}</p>
         <!--botão Cadastrar Nova Postagem-->
-        <button
-          class="btn btn-secondary text-center btn-postagem"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
+        <button class="btn btn-secondary text-center btn-postagem" data-toggle="modal" data-target="#exampleModal">
           Nova Postagem
         </button>
         <!--/botão-->
       </div>
-      <!--/ perfil do usuario -->
     </div>
+    <!--/ perfil do usuario -->
 
     <!-- Cards das materias -->
-    <div class="col-md-9 bg-postagem d-flex flex-column">
-      <div class="container-fluid card-deck justify-content-center m-0">
+    <div class="col-md-9 bg-postagem d-flex flex-column pl-5">
+      <div class="container-fluid card-deck justify-content-start m-0">
         <div class="row p-3 text-center">
           <div class="card">
-            <img
-              src="../../assets/img/tema-portugues.png"
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="../../assets/img/tema-portugues.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 [routerLink]="['/tema/1']" class="card-title nodeco">
                 Português
@@ -49,11 +34,7 @@
           </div>
 
           <div class="card">
-            <img
-              src="../../assets/img/tema-matematica.png"
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="../../assets/img/tema-matematica.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 [routerLink]="['/tema/2']" class="card-title nodeco">
                 Matemática
@@ -62,11 +43,7 @@
           </div>
 
           <div class="card">
-            <img
-              src="../../assets/img/tema-ciencia.png"
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="../../assets/img/tema-ciencia.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 [routerLink]="['/tema/3']" class="card-title nodeco">
                 Ciências
@@ -75,25 +52,19 @@
           </div>
 
           <div class="card">
-            <img
-              src="../../assets/img/Alfabetização.jpg"
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="../../assets/img/tema-alfebetizacao.png" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 [routerLink]="['/tema/4']" class="card-title nodeco">
+              <h5 [routerLink]="['/tema/3']" class="card-title nodeco">
                 Alfabetização
               </h5>
             </div>
           </div>
+
         </div>
+
         <div class="row p-3 text-center">
           <div class="card">
-            <img
-              src="../../assets/img/tema-programacao.png"
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="../../assets/img/tema-programacao.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 [routerLink]="['/tema/5']" class="card-title nodeco">
                 Programação
@@ -102,11 +73,7 @@
           </div>
 
           <div class="card">
-            <img
-              src="../../assets/img/tema-financa.png"
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="../../assets/img/tema-financa.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 [routerLink]="['/tema/6']" class="card-title nodeco">
                 Finanças
@@ -115,11 +82,7 @@
           </div>
 
           <div class="card">
-            <img
-              src="../../assets/img/tema-games copy.png"
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="../../assets/img/tema-games copy.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 [routerLink]="['/tema/7']" class="card-title nodeco">
                 Games
@@ -128,11 +91,7 @@
           </div>
 
           <div class="card">
-            <img
-              src="../../assets/img/tema-curiosidade.png"
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="../../assets/img/tema-curiosidade.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 [routerLink]="['/tema/8']" class="card-title nodeco">
                 Curiosidades
@@ -141,116 +100,79 @@
           </div>
         </div>
       </div>
-      <div class="col-lg d-flex justify-content-center">
-        <button
-          type="button"
-          class="btn poppins fs-16"
-          id="mainpurplebutton"
-          routerLink="/tema"
-        >
+
+      <div class="col p-ajuste pb-2">
+        <button type="button" class="btn poppins fs-16 my-4" id="mainpurplebutton" routerLink="/tema">
           Todos os temas
         </button>
       </div>
       <!--/materias-->
+
+      <div class="col">
+        <div class="line"></div>
+      </div>
+
       <!--postagens-->
       <div class="row bg-postagem">
-    
-          <div class="col-lg">
-            <h1 class="fs-54 text-start my-5 ml-4">Todas as Postagens</h1>
-            <div class="container d-flex justify-content-center m-3">
-              <div class="d-flex flex-column-reverse">
-                <div
-                  class="card mb-3 shadow mb-5"
-                  style="max-width: 900px"
-                  *ngFor="let item of listaPostagens"
-                >
-                  <div class="row no-gutters">
-                    <div
-                      class="col-md-10 card-header bg-white d-flex align-items-center"
-                    >
-                      <img
-                        class="rounded-circle ml-3"
-                        src="{{ item.usuario.foto }}"
-                        alt=""
-                        width="60px"
-                      />
-                      <p class="mt-3 ml-3">
-                        {{ item.usuario.nome }} | {{ item.usuario.tipo }}
-                      </p>
+
+        <div class="col-lg">
+          <h1 class="fs-54 p-ajuste-postagens my-5 ml-4">Todas as Postagens</h1>
+          <div class="container-fluid d-flex justify-content-start m-3">
+            <div class="d-flex flex-column-reverse">
+              <div class="card mb-3 shadow mb-5" style="max-width: 900px" *ngFor="let item of listaPostagens">
+                <div class="row no-gutters">
+                  <div class="col-md-10 card-header bg-white d-flex align-items-center">
+                    <img class="rounded-circle ml-3" src="{{ item.usuario.foto }}" alt="" width="60px" />
+                    <p class="mt-3 ml-3">
+                      {{ item.usuario.nome }} | {{ item.usuario.tipo }}
+                    </p>
+                  </div>
+                  <div class="col-md-2 card-header bg-white rounded-right border-left">
+                    <p class="font-weight-bolder d-flex mt-3 justify-content-center">
+                      {{ item.tema.assunto }}
+                    </p>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ item.titulo }}</h5>
+                      <p class="card-text">{{ item.texto }}</p>
                     </div>
-                    <div
-                      class="col-md-2 card-header bg-white rounded-right border-left"
-                    >
-                      <p
-                        class="font-weight-bolder d-flex mt-3 justify-content-center"
-                      >
-                        {{ item.tema.assunto }}
-                      </p>
-                    </div>
-                    <div class="col-md-7">
-                      <div class="card-body">
-                        <h5 class="card-title">{{ item.titulo }}</h5>
-                        <p class="card-text">{{ item.texto }}</p>
-                      </div>
-                    </div>
-                    <div class="col-md-5 pt-5 pr-3 pb-3">
-                      <img
-                        src="{{ item.imagem }}"
-                        class="w-100 rounded-lg"
-                        alt="imagem de postagem"
-                      />
-                    </div>
-                    <div class="col-md-7 border-top">
-                      <p class="card-text m-3">
-                        <small class="text-muted"
-                          >{{ item.data | date: "dd/MM/yyyy" }} às
-                          {{ item.data | date: "HH:mm" }}</small
-                        >
-                      </p>
-                    </div>
-                    <div class="col-md-5 d-flex justify-content-end border-top">
-                      <a
-                        class="mt-3 mr-1"
-                        [routerLink]="['/postagem-edit', item.id]"
-                      >
-                        <img src="../../assets/icons/editar.svg" alt="" />
-                      </a>
-                      <a
-                        class="m-3 ml-2"
-                        [routerLink]="['/postagem-delete', item.id]"
-                      >
-                        <img src="../../assets/icons/deletar.svg" alt="" />
-                      </a>
-                    </div>
+                  </div>
+                  <div class="col-md-5 pt-5 pr-3 pb-3">
+                    <img src="{{ item.imagem }}" class="w-100 rounded-lg" alt="imagem de postagem" />
+                  </div>
+                  <div class="col-md-7 border-top">
+                    <p class="card-text m-3">
+                      <small class="text-muted">{{ item.data | date: "dd/MM/yyyy" }} às
+                        {{ item.data | date: "HH:mm" }}</small>
+                    </p>
+                  </div>
+                  <div class="col-md-5 d-flex justify-content-end border-top">
+                    <a class="mt-3 mr-1" [routerLink]="['/postagem-edit', item.id]">
+                      <img src="../../assets/icons/editar.svg" alt="" />
+                    </a>
+                    <a class="m-3 ml-2" [routerLink]="['/postagem-delete', item.id]">
+                      <img src="../../assets/icons/deletar.svg" alt="" />
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!--/postagens-->
+      </div>
+      <!--/postagens-->
     </div>
   </div>
 </div>
 
 <!-- Modal -->
-<div
-  class="modal fade"
-  id="exampleModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Nova Postagem</h5>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -258,51 +180,24 @@
       <div class="modal-body">
         <div class="form-group">
           <label for="titulo">Título</label>
-          <input
-            [(ngModel)]="postagem.titulo"
-            type="text"
-            class="form-control"
-            id="titulo"
-            placeholder="Digite o título"
-          />
+          <input [(ngModel)]="postagem.titulo" type="text" class="form-control" id="titulo" placeholder="Digite o título" />
         </div>
 
         <div class="form-group">
           <label for="texto">Texto</label>
-          <textarea
-            [(ngModel)]="postagem.texto"
-            class="form-control"
-            name="texto"
-            id="texto"
-            rows="3"
-          ></textarea>
+          <textarea [(ngModel)]="postagem.texto" class="form-control" name="texto" id="texto" rows="3"></textarea>
         </div>
 
         <div class="form-group">
           <label for="url">Link da foto</label>
-          <input
-            [(ngModel)]="postagem.imagem"
-            class="form-control"
-            name="foto"
-            id="foto"
-            placeholder="Link da foto"
-          />
+          <input [(ngModel)]="postagem.imagem" class="form-control" name="foto" id="foto" placeholder="Link da foto" />
         </div>
 
         <div class="form-group">
-          <label for="texto"
-            >Escolha um tema ou
-            <a data-dismiss="modal" data-target="#my-modal" routerLink="/tema"
-              >cadastre um novo</a
-            >:
+          <label for="texto">Escolha um tema ou
+            <a data-dismiss="modal" data-target="#my-modal" routerLink="/tema">cadastre um novo</a>:
           </label>
-          <select
-            name="tema"
-            id="tema"
-            class="form-control"
-            [(ngModel)]="idTema"
-            (change)="findByIdTema()"
-          >
+          <select name="tema" id="tema" class="form-control" [(ngModel)]="idTema" (change)="findByIdTema()">
             <option *ngFor="let item of listaMaterias" value="{{ item.id }}">
               {{ item.assunto }}
             </option>
@@ -313,12 +208,7 @@
           <button type="button" class="btn btn-danger" data-dismiss="modal">
             Cancelar
           </button>
-          <button
-            type="button"
-            class="btn btn-success"
-            (click)="publicar()"
-            data-dismiss="modal"
-          >
+          <button type="button" class="btn btn-success" (click)="publicar()" data-dismiss="modal">
             Publicar
           </button>
         </div>

@@ -1,77 +1,34 @@
-<header>
-  <!--Inicio Nav-->
-  <nav>
-    <ul class="nav-links">
-      <li><a href="/landingPage">Voltar</a></li>
-      <li><a id="login-tag" routerLink="/cadastrar">Cadastrar</a></li>
-    </ul>
-  </nav>
-</header>
+<div class="container-fluid bg-fundo">
 
-<!--Fim  Nav-->
+  <div class="row d-flex align-items-center justify-content-center full-width">
 
-<div class="container-fluid">
-  <div class="row d-flex align-items-center">
     <div class="col-md-6">
+      <!-- Campos do cadastro -->
       <div class="row d-flex justify-content-center">
-        <div class="col-md-6 mt-5 p-5">
-          <h1 id="text-home" class="text-center mb-3">Boas-vindas!</h1>
+        <div class="col-md-7 bg-branco shadow-lg p-5 bg-white rounded">
 
-          <!--paragrafo-->
-          <p class="text-center2 mb-4">
-            Não possui uma conta?
-            <span
-              ><a id="text-p" class="ml-2" routerLink="/cadastrar" id="login-tag">
-                Cadastrar</a
-              ></span
-            >
-          </p>
-          <!--Usuario-->
+          <h1 class="text-start">Que bom que você chegou !</h1>
+          <h5 class="text-start pb-3">Não possui uma conta? <a routerLink='/cadastrar'><span class="bg-logar">Cadastrar</span></a></h5>
+
           <div class="form-group">
+            <img class="d-inline pr-2" src="../../assets/icons/User_Card_ID.svg" alt="">
             <label for="usuario">Username</label>
-            <input
-
-              [(ngModel)]="userLogin.usuario"
-
-              class="form-control mt-2"
-              type="text"
-              name="usuario"
-              id="usuario"
-              placeholder="Daniel123@gmail.com"
-            />
+            <input [(ngModel)]="userLogin.usuario" class="form-control mt-2" type="text" name="usuario" id="usuario" placeholder="Daniel123@gmail.com" />
           </div>
 
-          <!-- Senha-->
-
-          <div class="form-group">
+          <div class="form-group pt-2">
+            <img class="d-inline pr-2" src="../../assets/icons/Lock.svg" alt="">
             <label for="usuario">Senha</label>
-            <input
-
-              [(ngModel)]="userLogin.senha"
-
-              class="form-control mt-2"
-              type="password"
-              name="senha"
-              id="senha"
-              placeholder="Digite sua senha"
-            />
+            <input [(ngModel)]="userLogin.senha" class="form-control mt-2" type="password" name="senha" id="senha" placeholder="Digite sua senha" />
           </div>
-
-          <!--Button-->
-          <div class="d-flex justify-content-center mt-4">
-
-            <a class="btn-btn-login login mt-4" (click)="entrar()"
-              >Login</a>
-
+          <div class=" d-flex justify-content-center pt-3">
+            <button type="submit" class="btn btn-success btn-cadastrar" (click)="entrar()">Login</button>
           </div>
-          <!--Fim Button-->
-
-          <hr class="mt-4" />
         </div>
+
+
+
       </div>
-    </div>
-    <div class="col-md-6 mt-5">
-      <img src="../../assets/img/login.svg" alt="" />
     </div>
   </div>
 </div>

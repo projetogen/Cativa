@@ -1,100 +1,54 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
 * {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
+  color: #181818;
 }
 
-body {
-  box-sizing: border-box;
-  margin: 0;
+.bg-fundo {
+  background-color: #fffcf7;
 }
 
-li,
-a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #d44f32;
-}
-header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 30px 10%;
-}
-.nav-links {
-  list-style: none;
-}
-.nav-links li {
-  display: inline-block;
-  padding: 0px 20px;
+.bg-branco {
+  background-color: white;
 }
 
-
-#text-p {
-  display: flex;
-  text-align: center;
-  justify-content: space-evenly;
+input {
+  border: 2px solid #8a71b8;
+  border-radius: 10px;
 }
 
-#usuario,
-#senha {
-  border-radius: 10rem;
-  height: 3.2rem;
-  padding: 20px;
-  border: 1px solid blueviolet;
-}
-
-#text-home {
-  display: flex;
-  align-items: flex-start;
+h1 {
   color: #8a71b8;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+h5 {
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.btn-cadastrar {
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background: #8a71b8;
+  width: 150px;
+  height: 50px ;
   font-size: 25px;
-  font-style: normal;
-  letter-spacing: 0.9px;
 }
 
-.text-center2 {
-  display: flex;
-  text-align: start;
+.btn-cancelar {
+  border-radius: 25px;
+  border: none;
+  color: white;
+  background: #d44f32;
+  width: 50%;
 }
 
-.btn-btn-login {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  color: #fff;
-
-  border: 1px solid blueviolet;
-  background-color: #8a71b8;
-  padding: 12px 35px;
-  margin: 0 15px;
-  font-weight: 400;
-  line-height: 30px;
-  border-radius: 10rem;
-  width: 20rem;
-  height: 3.1rem;
-  font-size: 21px;
-
-  cursor: pointer;
-  overflow: hidden;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.form-control {
-  font-weight: 500;
+.full-width {
+  min-height: 100vh;
 }
 
-span {
-  text-decoration: none;
-}
-
-#login-tag {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  color: #5b822b;
-}
-.form-group {
-  font-weight: 600;
+.bg-logar {
+  color: #547131;
 }
